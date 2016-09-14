@@ -1,0 +1,29 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-textarea.html">
+
+<dom-module id="my-new-view">
+    <!-- Defines the element's style and local DOM -->
+    <template>
+        <style>
+            :host {
+                display: block;
+
+                padding: 16px;
+            }
+        </style>
+
+        <h1>New view</h1>
+        <paper-textarea is="iron-input" bind-value="{{remoteMessage}}"></paper-textarea>
+        <paper-textarea is="iron-input" bind-value="{{userMessage}}"></paper-textarea>
+    </template>
+    <!-- Creates the element's prototype and registers it -->
+    <script>
+        Polymer({
+            is: 'my-new-view',
+            properties: {
+                remoteMessage: String,
+                userMessage: String
+            }
+        });
+    </script>
+</dom-module>
